@@ -48,33 +48,28 @@ public class FillFormTest {
         $("#react-select-4-option-1").click();
         //нажать Submit
         $("#submit").click();
-        sleep(5000);
-        //проверить Name
-        $("[id=]").shouldHave(text(""));
-        //проверить LastName
-        $("[id=]").shouldHave(text(""));
+        //проверить Name и LastName
+        $(".table").shouldHave(text("Student Name Alexander Volodin"));
         //проверить Email
-        $("[id=]").shouldHave(text(""));
+        $(".table").shouldHave(text("Student Email lex@test.ru"));
         //проверить Gender
-        $("[id=]").shouldHave(text(""));
+        $(".table").shouldHave(text("Gender Male"));
         //проверить Mobile
-        $("[id=]").shouldHave(text(""));
+        $(".table").shouldHave(text("Mobile 7123456789"));
         //проверить Date of Birth
-        $("[id=]").shouldHave(text(""));
+        $(".table").shouldHave(text("Date of Birth 15 December,1989"));
         //проверить Subjects
-        $("[id=]").shouldHave(text(""));
+        $(".table").shouldHave(text("Subjects Chemistry, Physics"));
         //проверить Hobbies
-        $("[id=]").shouldHave(text(""));
+        $(".table").shouldHave(text("Hobbies 	Sports, Music"));
         //проверить Picture
-        $("[id=]").shouldHave(text(""));
+        $(".table").shouldHave(text("Picture image.jpg"));
         //проверить Current Address
-        $("[id=]").shouldHave(text(""));
-        //проверить State
-        $("[id=]").shouldHave(text(""));
-        //проверить City
-        $("[id=]").shouldHave(text(""));
+        $(".table").shouldHave(text("Address Lenina Street, 1a"));
+        //проверить State и City
+        $(".table").shouldHave(text("State and City Rajasthan Jaiselmer"));
 
 
-        sleep(5000);
+
     }
 }
