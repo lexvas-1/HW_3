@@ -1,7 +1,9 @@
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.Test;
+import java.io.File;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 
@@ -23,26 +25,30 @@ public class FillFormTest {
         $("label[for='gender-radio-1']").click();
         //ввести Mobile
         $("#userNumber").setValue("7123456789");
-        //выбрать Date of Birth
+        //выбрать Date of Birth - месяц, год и день
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOptionByValue("11");
         $(".react-datepicker__year-select").selectOptionByValue("1989");
         $(".react-datepicker__day--015").click();
         //ввести Subjects
-       // $("").setValue("");
-        sleep(5000);
+        $("#subjectsInput").setValue("Chemistry").pressEnter();
+        $("#subjectsInput").setValue("ph").pressEnter();
         //выбрать Hobbies
-        $("[name=]").setValue("");
+        $("#hobbiesWrapper").$(byText("Sports")).click();
+        $("#hobbiesWrapper").$(byText("Music")).click();
         //загрузить Picture
-        $("[name=]").setValue("");
+        $("#uploadPicture").uploadFile(new File("src/test/files/image.jpg"));
         //ввести Current Address
-        $("[name=]").setValue("");
+        $("#currentAddress").setValue("Lenina Street, 1a");
         //выбрать State
-        $("[name=]").setValue("");
+        $("#state").click();
+        $("#react-select-3-option-3").click();
         //выбрать City
-        $("[name=]").setValue("");
+        $("#city").click();
+        $("#react-select-4-option-1").click();
         //нажать Submit
-        $("[name=]").setValue("");
+        $("#submit").click();
+        sleep(5000);
         //проверить Name
         $("[id=]").shouldHave(text(""));
         //проверить LastName
