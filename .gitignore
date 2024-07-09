@@ -17,6 +17,9 @@ build/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+.idea/gradle.xml
+.idea/misc.xml
+.idea/vsc.xml
 
 ### Eclipse ###
 .apt_generated
@@ -44,3 +47,4 @@ bin/
 .DS_Store
 /.idea/
 
+/.idea/*
