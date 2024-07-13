@@ -69,7 +69,5 @@ public class FillFormTest {
         //проверить State и City
         $(".table").shouldHave(text("State and City Rajasthan Jaiselmer"));
 
-
-
     }
 }
