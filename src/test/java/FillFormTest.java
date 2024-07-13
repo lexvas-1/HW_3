@@ -55,7 +55,5 @@ static void beforeAll() {
         $(".table").shouldHave(text("Address Lenina Street, 1a"));
         $(".table").shouldHave(text("State and City Rajasthan Jaiselmer"));
 
-
-
     }
 }
