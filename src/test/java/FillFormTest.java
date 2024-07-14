@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class FillFormTest {
 
     @BeforeAll
-static void beforeAll() {
+    static void beforeAll() {
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
@@ -36,7 +36,7 @@ static void beforeAll() {
         $("#subjectsInput").setValue("ph").pressEnter();
         $("#hobbiesWrapper").$(byText("Sports")).click();
         $("#hobbiesWrapper").$(byText("Music")).click();
-        $("#uploadPicture").uploadFromClasspath( "image.jpg");
+        $("#uploadPicture").uploadFromClasspath("image.jpg");
         $("#currentAddress").setValue("Lenina Street, 1a");
         $("#stateCity-wrapper").$(byText("Select State")).click();
         $("#stateCity-wrapper").$(byText("Rajasthan")).click();
